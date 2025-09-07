@@ -1,0 +1,23 @@
+{
+   // https://containers.dev/features
+   "name": "Node.js Dev Environment",
+   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+   "features": {
+      "ghcr.io/devcontainers/features/node:1": { "version": "latest" },
+      "ghcr.io/michidk/devcontainers-features/bun:1": { "version": "latest" }
+   },
+   "customizations": {
+      "vscode": {
+         "extensions": [
+            "dbaeumer.vscode-eslint",
+            "esbenp.prettier-vscode",
+            "bradlc.vscode-tailwindcss"
+         ],
+         "settings": {
+            "terminal.integrated.defaultProfile.linux": "bash"
+         }
+      }
+   },
+   "forwardPorts": [3000, 9229, 5173],
+   "remoteUser": "vscode"
+}
